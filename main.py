@@ -1,11 +1,15 @@
-#Create Class book
+def load_data(title):
+  pass
+
+#Create Book class
 class Book:
   #Provide attributes
-  def __init__(self, title, author, pages, read):
-  #Constructor to initializse
+  def __init__(self, title, author, pages):
+  #Constructor to initialize
     self.title = title
     self.author = author
     self.pages = pages
+    self.data = load_data(title)
     self.read = False
 
   #Define description() method
@@ -31,3 +35,22 @@ book1.marked_as_read()
 book2 = Book("The Seven Spiritual Laws of Success: A Practical Guide to the Fulfillment of Your Dreams", "Deepak Chopra", 118)
 #Print descriptions=
 print(book2.description())
+
+#Create User class
+class User:
+  #Provide attributes
+  def __init__(self, name, accnt):
+    #Constructor to initialize
+    self.name = name
+    self.accnt = accnt
+    self.shelf = []
+    self.balance = 0
+
+  #Define buy_book
+  def buy_book(self, book):
+    self.book += book1[book] and book2[book]
+    self.shelf += Book(book1 and book2)
+
+  #Define read_book
+  def read_book(self, book):
+    book = self.shelf[self.shelf.find(book)]
